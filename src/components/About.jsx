@@ -12,7 +12,6 @@ export default function About() {
           .then((res) => {
               setTitle(res.data.title.rendered)
               setContent(res.data.content.rendered)
-              setFeatured('https://dev.darrinduncan.com/wp-content/uploads/2023/02/Darrin-Duncan-scaled.jpg')
               console.log(res.data)
           })
           .catch((err) => {
@@ -28,7 +27,7 @@ export default function About() {
         <div className="container">
           <div className="about-body">
             <div className="about-img"></div>
-            {/* <img className="about-img" src={featured} alt="" /> */}
+            
             <div className="content">
               <h2>{title}</h2>
               <div dangerouslySetInnerHTML={{ __html: content }} />
