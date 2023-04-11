@@ -4,7 +4,6 @@ import axios from 'axios'
 export default function About() {
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
-    const [featured, setFeatured] = useState('')
 
     useEffect(() => {
       axios
