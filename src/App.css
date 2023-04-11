@@ -1,38 +1,433 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@100;300;400;500;600&display=swap");
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition-duration: 100ms;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Skills */
+}
+html body {
+  font-family: "Poppins", sans-serif;
+  color: #666;
+  line-height: 1.5;
+  /* About */
+}
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5 {
+  font-family: "Poppins", sans-serif;
+  color: #232323;
+}
+html body h1 {
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+}
+html body h2 {
+  font-size: clamp(3.4rem, 4vw, 2.5em);
+  font-weight: 300;
+  line-height: 1;
+  padding-bottom: 40px;
+}
+html body h3 {
+  font-size: clamp(1.4rem, 2.4vw, 3.4rem);
+  font-weight: 400;
+}
+html body #About,
+html body #Projects,
+html body #coding,
+html body #Skills,
+html body #Connect {
+  padding: 10rem 1.25rem;
+}
+html body .para {
+  max-width: 600px;
+  width: 100%;
   text-align: center;
+  margin: 0 auto;
+  padding-bottom: 40px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html body .navbar {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.737);
+  box-shadow: 0 0 50px rgba(42, 119, 235, 0.2823529412);
+  padding: 1.5em;
+  text-transform: uppercase;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+html body .navbar .navbar-brand .logo {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.4em;
+  padding: 5px;
+  background: #232323;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 50px rgba(42, 119, 235, 0.2823529412);
+}
+html body .navbar .navbar-brand .logo:hover {
+  background: #2059ae;
+}
+html body .navbar .navbar-toggler {
+  border: unset;
+  box-shadow: unset;
+  padding: 20px;
+}
+html body .navbar .navbar-toggler:focus {
+  border: unset;
+  box-shadow: unset;
+  padding: 20px;
+}
+html body .navbar .nav-item {
+  width: 100%;
+}
+html body .navbar .nav-item .nav-link {
+  padding: 10px;
+  display: block;
+  text-align: center;
+  font-family: "oswald", sans-serif;
+  font-size: 20px;
+  margin: 2px;
+}
+html body .navbar .nav-item .nav-link:focus {
+  background: #2059ae;
+}
+html body .navbar .nav-link:focus,
+html body .navbar .nav-link:hover {
+  color: #fff;
+  font-weight: 400;
+  background: #2059ae;
+  margin-top: 2px;
+}
+html body .hero {
+  height: 100vh;
+  position: static;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://dev.darrinduncan.com/wp-content/uploads/2023/02/Banner01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 20%;
+}
+html body .hero .content {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  background: #fff;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+html body .hero .content h3 strong {
+  color: #2059ae;
+}
+@media (min-width: 768px) {
+  html body .hero .content {
+    padding: 20px;
+    width: 70%;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html body .hero .btn-grp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0;
+}
+html body .hero .btn-grp a {
+  margin: 10px 0;
+}
+html body .hero .btn-grp .btn {
+  margin-right: 10px;
+}
+html body .hero .btn-grp .btn:hover {
+  box-shadow: 0 0 10px rgba(42, 119, 235, 0.2823529412);
+}
+@media (min-width: 768px) {
+  html body .hero .btn-grp {
+    flex-direction: row;
+  }
+}
+html body .about {
+  background-color: #fff;
+  min-height: 44em;
+}
+html body .about .about-body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 50px rgba(42, 119, 235, 0.2823529412);
+}
+@media (min-width: 991px) {
+  html body .about .about-body {
+    flex-direction: row;
+    width: 900px;
+  }
+}
+html body .about .about-body .about-img {
+  height: 600px;
+  width: 100%;
+  background: url("https://dev.darrinduncan.com/wp-content/uploads/2018/11/DarrinDuncan.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  html body .about .about-body .about-img {
+    width: 400px;
+    height: 400px;
+  }
+}
+html body .about .about-body .content {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+html body .about .about-body .content h2 {
+  text-align: center;
+}
+@media (min-width: 991px) {
+  html body .about .about-body .content h2 {
+    text-align: left;
+  }
+}
+html body .about .about-body .content p {
+  margin: 20px auto;
+  width: 80%;
+}
+@media (min-width: 991px) {
+  html body .about .about-body .content p {
+    margin: 0 20px 0 0;
+  }
+}
+@media (min-width: 991px) {
+  html body .about .about-body .content {
+    padding-left: 50px;
+    text-align: left;
+  }
+}
+html .skills {
+  background: #eef6ff;
+  color: #232323;
+  padding: 5rem 0.5em;
+  min-height: 100vh;
+}
+html .skills svg {
+  color: #232323;
+  border: solid 1px #232323;
+  border-radius: 50%;
+  padding: 4px;
+  margin-bottom: 6px;
+  font-size: 2em;
+}
+html .skills h2 {
+  text-align: center;
+}
+html .skills h4 {
+  font-size: 2em;
+  text-transform: unset;
+}
+html .skills .grid {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
 }
-
-.App-link {
-  color: #61dafb;
+html .skills .skill-card {
+  background-color: transparent;
+  color: #232323;
+  padding: 6px 16px 1px;
+  margin: 4px;
+  border-radius: 10px;
+  transition: transform 250ms ease-out;
+  min-width: 300px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+html .skills .skill-card:hover {
+  box-shadow: 0 0 10px #acc4e8;
+  background-color: #fff;
+  transition: transform 1250ms ease-out;
+}
+@media (max-width: 991px) {
+  html .skills .skill-card {
+    max-width: 120px;
+    width: unset;
   }
-  to {
-    transform: rotate(360deg);
+}
+html .skills .skill-card p {
+  font-size: 1em;
+  padding-bottom: 10px;
+}
+html .coding-card {
+  background-color: #fff;
+  color: #232323;
+  margin: 0 0.8em 0.8em 0;
+  padding: 1em;
+  border-radius: 10px;
+  border: solid 2px #fff;
+}
+html .coding-card:hover {
+  box-shadow: 0 0 10px rgba(42, 119, 235, 0.2823529412);
+  border: solid 2px #2a77eb;
+}
+html .card {
+  border-radius: 10px;
+  background-color: #fff;
+  transition: transform 250ms ease-out;
+}
+html .card:hover {
+  box-shadow: 0 0 20px rgba(42, 119, 235, 0.2823529412);
+  transform: translateY(-5px);
+  transform-origin: center;
+}
+html .projects {
+  padding: 5rem 1.5em;
+  min-height: 100vh;
+}
+html .projects h2 {
+  text-align: center;
+}
+html .projects .card .card-img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+html .projects .card .card-button-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+html .projects .card .card-button-group a {
+  margin: 10px 0;
+}
+@media (min-width: 1200px) {
+  html .projects .card .card-button-group {
+    flex-direction: row;
   }
 }
+html .projects .other-links {
+  display: flex;
+  justify-content: space-between;
+}
+html .contact {
+  padding: 5rem 1.5em;
+  background: #232323;
+  color: #fff;
+  min-height: 50vh;
+  position: absolute;
+  width: 100%;
+}
+html .contact .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+}
+@media (min-width: 768px) {
+  html .contact .container {
+    flex-direction: row;
+  }
+}
+html .contact h2 {
+  color: #2a77eb;
+}
+html .contact .email-border-wrap {
+  background: linear-gradient(324deg, rgb(43, 119, 235) 0%, rgb(218, 233, 255) 100%);
+  border-radius: 10px;
+  padding: 1px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+html .contact .email {
+  border-radius: 10px;
+  padding: 40px;
+  background: rgb(43, 119, 235);
+  background: linear-gradient(324deg, rgb(43, 119, 235) 0%, rgb(153, 176, 212) 100%);
+}
+html .contact .email form {
+  display: flex;
+  flex-direction: column;
+}
+html .contact .email form .form-elements {
+  border-radius: 10px;
+  border: unset;
+  padding: 4px 6px;
+  margin-bottom: 20px;
+}
+html .contact .email form .g-recaptcha {
+  margin-bottom: 20px;
+  width: 100%;
+}
+html .btn {
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+}
+@media (max-width: 374px) {
+  html .btn {
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+  }
+}
+html .btn-primary {
+  color: #fff;
+  background-color: #2059ae;
+  border-color: #2059ae;
+}
+html .btn-primary:hover {
+  color: #2059ae;
+  background-color: transparent;
+  border-color: #2059ae;
+}
+html .btn-primary:not(:disabled):not(.disabled).active,
+html .btn-primary:not(:disabled):not(.disabled):active,
+html .show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #232323;
+  border-color: #232323;
+}
+html .btn-primary.focus,
+html .btn-primary:focus {
+  color: #fff;
+  background-color: #232323;
+  border-color: #232323;
+  box-shadow: 0 0 0 0.2rem rgba(42, 119, 235, 0.2823529412);
+}
+html .btn-purpl {
+  color: #fff;
+  background-color: #7a8daa;
+  border-color: #7a8daa;
+}
+html .btn-purpl:hover {
+  color: #fff;
+  background-color: #4e5a6b;
+  border-color: #4e5a6b;
+}
+html .btn-org {
+  color: #fff;
+  background-color: #2a77eb;
+  border-color: #2a77eb;
+}
+html .btn-org:hover {
+  color: #fff;
+  background-color: #2059ae;
+  border-color: #2059ae;
+}/*# sourceMappingURL=App.css.map */

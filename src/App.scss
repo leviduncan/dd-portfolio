@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@100;300;400;500;600&display=swap');
+
+$purpl: #7a8daa;
+$dk-purpl: #4e5a6b;
+$wht: #fff;
+$blu: #acc4e8;
+$lht-blu: #eef6ff;
+$blk: #232323;
+$gry: #666;
+$lt-gry: rgb(243, 243, 243);
+$org: #2a77eb;
+$dk-org: #2059ae;
+$dd-pnk: #ffe5ff;
+
+// $org: #f05f40;
+// $dk-org: #b54d35;
+
+$p2-shadow: #2a77eb48;
+
+$bdr-radius: 10px;
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition-duration: 100ms;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: $gry;
+    line-height: 1.5;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: 'Poppins', sans-serif;
+      color: $blk;
+    }
+
+    h1 {
+      font-weight: 600;
+      line-height: 1.2;
+      font-size: clamp(2.4rem, 4vw, 4rem);
+    }
+
+    h2 {
+      font-size: clamp(3.4rem, 4vw, 2.5em);
+      font-weight: 300;
+      line-height: 1;
+      padding-bottom: 40px;
+    }
+
+    h3 {
+      font-size: clamp(1.4rem, 2.4vw, 3.4rem);
+      font-weight: 400;
+    }
+
+    #About,
+    #Projects,
+    #coding,
+    #Skills,
+    #Connect {
+      padding: 10rem 1.25rem;
+    }
+
+    .para {
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+      padding-bottom: 40px;
+    }
+
+    .navbar {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.737);
+      box-shadow: 0 0 50px $p2-shadow;
+      padding: 1.5em;
+      text-transform: uppercase;
+
+      .navbar-brand .logo {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.4em;
+        padding: 5px;
+        background: $blk;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 50px $p2-shadow;
+
+        &:hover {
+          background: $dk-org;
+        }
+      }
+
+      .navbar-toggler {
+        border: unset;
+        box-shadow: unset;
+        padding: 20px;
+        &:focus {
+          border: unset;
+          box-shadow: unset;
+          padding: 20px;
+        }
+      }
+      .nav-item {
+        width: 100%;
+
+        .nav-link {
+          padding: 10px;
+          display: block;
+          text-align: center;
+          font-family: 'oswald', sans-serif;
+          font-size: 20px;
+          margin: 2px;
+
+          &:focus {
+            background: $dk-org;
+          }
+        }
+      }
+
+      .nav-link:focus,
+      .nav-link:hover {
+        color: $wht;
+        font-weight: 400;
+        background: $dk-org;
+        margin-top: 2px;
+      }
+    }
+    .hero {
+      height: 100vh;
+      position: static;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('https://dev.darrinduncan.com/wp-content/uploads/2023/02/Banner01.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 20%;
+
+      @media (min-width: 768px) {
+        //background-position: 20% 20%;
+      }
+
+      .content {
+        display: flex;
+        padding: 10px;
+        width: 100%;
+        background: $wht;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        h3 strong {
+          color: $dk-org;
+        }
+
+        @media (min-width: 768px) {
+          padding: 20px;
+          width: 70%;
+        }
+      }
+
+      .btn-grp {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        margin: 10px 0;
+
+        a {
+          margin: 10px 0;
+        }
+
+        .btn {
+          margin-right: 10px;
+
+          &:hover {
+            box-shadow: 0 0 10px $p2-shadow;
+          }
+        }
+
+        @media (min-width: 768px) {
+          flex-direction: row;
+        }
+      }
+    }
+
+    /* About */
+
+    .about {
+      background-color: $wht;
+      min-height: 44em;
+
+      .about-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        // border: solid 1px $blu;
+        // background: $lht-blu;
+
+        // border: solid 1px $wht;
+        // background: $wht;
+
+        margin: 0 auto;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 50px $p2-shadow;
+
+        @media (min-width: 991px) {
+          flex-direction: row;
+          width: 900px;
+        }
+
+        .about-img {
+          height: 600px;
+          width: 100%;
+          background: url('https://dev.darrinduncan.com/wp-content/uploads/2018/11/DarrinDuncan.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 10px;
+
+          @media (min-width: 768px) {
+            width: 400px;
+            height: 400px;
+          }
+        }
+
+        .content {
+          width: 100%;
+          padding: 20px;
+          text-align: center;
+
+          h2 {
+            text-align: center;
+
+            @media (min-width: 991px) {
+              text-align: left;
+            }
+          }
+
+          p {
+            margin: 20px auto;
+            width: 80%;
+
+            @media (min-width: 991px) {
+              margin: 0 20px 0 0;
+            }
+          }
+
+          @media (min-width: 991px) {
+            padding-left: 50px;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+  /* Skills */
+
+  .skills {
+    background: $lht-blu;
+    color: $blk;
+    padding: 5rem 0.5em;
+    min-height: 100vh;
+
+    svg {
+      color: $blk;
+      border: solid 1px $blk;
+      border-radius: 50%;
+      padding: 4px;
+      margin-bottom: 6px;
+      font-size: 2em;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    h4 {
+      font-size: 2em;
+      text-transform: unset;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      // border: solid 1px red;
+    }
+
+    .skill-card {
+      background-color: transparent;
+      color: $blk;
+      padding: 6px 16px 1px;
+      margin: 4px;
+      border-radius: 10px;
+      transition: transform 250ms ease-out;
+      min-width: 300px;
+
+      &:hover {
+        box-shadow: 0 0 10px $blu;
+        background-color: $wht;
+        transition: transform 1250ms ease-out;
+      }
+
+      @media (max-width: 991px) {
+        max-width: 120px;
+        width: unset;
+      }
+
+      p {
+        font-size: 1em;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  .coding-card {
+    background-color: $wht;
+    color: $blk;
+    margin: 0 0.8em 0.8em 0;
+    padding: 1em;
+    border-radius: $bdr-radius;
+    border: solid 2px $wht;
+
+    &:hover {
+      box-shadow: 0 0 10px $p2-shadow;
+      border: solid 2px $org;
+    }
+  }
+
+  .card {
+    border-radius: $bdr-radius;
+    background-color: $wht;
+    transition: transform 250ms ease-out;
+
+    &:hover {
+      box-shadow: 0 0 20px $p2-shadow;
+      transform: translateY(-5px);
+      transform-origin: center;
+    }
+  }
+
+  // Projects
+  .projects {
+    padding: 5rem 1.5em;
+    min-height: 100vh;
+
+    h2 {
+      text-align: center;
+    }
+
+    .card {
+      .card-img {
+        border-top-right-radius: $bdr-radius;
+        border-top-left-radius: $bdr-radius;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      .card-button-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        a {
+          margin: 10px 0;
+        }
+
+        @media (min-width: 1200px) {
+          flex-direction: row;
+        }
+      }
+    }
+    .other-links {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  // Contact
+  .contact {
+    padding: 5rem 1.5em;
+    background: $blk;
+    color: $wht;
+    min-height: 50vh;
+    position: absolute;
+    width: 100%;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 600px;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+    }
+
+    h2 {
+      color: $org;
+    }
+
+    .email-border-wrap {
+      background: linear-gradient(
+        324deg,
+        rgba(43, 119, 235, 1) 0%,
+        rgb(218, 233, 255) 100%
+      );
+      border-radius: 10px;
+      padding: 1px;
+      box-shadow: 0 0 10px rgb(0, 0, 0);
+    }
+
+    .email {
+      border-radius: 10px;
+      padding: 40px;
+      background: rgb(43, 119, 235);
+      background: linear-gradient(
+        324deg,
+        rgba(43, 119, 235, 1) 0%,
+        rgb(153, 176, 212) 100%
+      );
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        .form-elements {
+          border-radius: 10px;
+          border: unset;
+          padding: 4px 6px;
+          margin-bottom: 20px;
+        }
+
+        .g-recaptcha {
+          margin-bottom: 20px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .btn {
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+
+    @media (max-width: 374px) {
+      border-radius: 10px;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  .btn-primary {
+    color: $wht;
+    background-color: $dk-org;
+    border-color: $dk-org;
+
+    &:hover {
+      color: $dk-org;
+      background-color: transparent;
+      border-color: $dk-org;
+    }
+  }
+
+  .btn-primary:not(:disabled):not(.disabled).active,
+  .btn-primary:not(:disabled):not(.disabled):active,
+  .show > .btn-primary.dropdown-toggle {
+    color: $wht;
+    background-color: $blk;
+    border-color: $blk;
+  }
+
+  .btn-primary.focus,
+  .btn-primary:focus {
+    color: $wht;
+    background-color: $blk;
+    border-color: $blk;
+    box-shadow: 0 0 0 0.2rem $p2-shadow;
+  }
+
+  .btn-purpl {
+    color: $wht;
+    background-color: $purpl;
+    border-color: $purpl;
+
+    &:hover {
+      color: $wht;
+      background-color: $dk-purpl;
+      border-color: $dk-purpl;
+    }
+  }
+
+  .btn-org {
+    color: $wht;
+    background-color: $org;
+    border-color: $org;
+
+    &:hover {
+      color: $wht;
+      background-color: $dk-org;
+      border-color: $dk-org;
+    }
+  }
+}
